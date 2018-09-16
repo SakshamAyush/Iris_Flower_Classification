@@ -5,7 +5,7 @@ Created on Sun Sep 16 16:31:48 2018
 @author: Saksham
 """
 # Load libraries
-import pandas
+import pandas as pd
 from pandas.plotting import scatter_matrix
 import matplotlib.pyplot as plt
 from sklearn import model_selection
@@ -20,4 +20,16 @@ from sklearn.naive_bayes import GaussianNB
 from sklearn.svm import SVC
 url = "https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data"
 names = ['sepal-length', 'sepal-width', 'petal-length', 'petal-width', 'class']
-dataset = pandas.read_csv(url, names=names)
+dataset = pd.read_csv(url, names=names)
+#to get total attributes
+print(dataset.shape)
+#avoid truncation
+pd.options.display.max_columns = 10
+#view first 5 data in dataset
+print(dataset.head(5))
+print("\n",dataset.describe())
+#grouping data
+print("\n",dataset.groupby('class').size())
+# box and whisker plots
+dataset.plot(kind='box', subplots=True, layout=(2,2), sharex=False, sharey=False)
+plt.show()
