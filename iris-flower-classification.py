@@ -20,7 +20,7 @@ from sklearn.naive_bayes import GaussianNB
 from sklearn.svm import SVC
 url = "https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data"
 names = ['sepal-length', 'sepal-width', 'petal-length', 'petal-width', 'class']
-dataset = pd.read_csv(url, names=names)
+dataset = pd.read_csv("F:\College\Projects\Iris_Flower_Classification\data\iris.csv", names=names)
 #to get total attributes
 print(dataset.shape)
 #avoid truncation
@@ -40,3 +40,9 @@ plt.show()
 # scatter plot matrix
 scatter_matrix(dataset)
 plt.show()
+array=dataset.values
+X=array[:,0:4]
+Y = array[:,4]
+#X stores first 4 columns
+#Y stores last column
+X_train, X_validation, Y_train, Y_validation = model_selection.train_test_split(X, Y, test_size=0.25, random_state=42)
