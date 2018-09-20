@@ -20,7 +20,7 @@ from sklearn.naive_bayes import GaussianNB
 from sklearn.svm import SVC
 url = "https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data"
 names = ['sepal-length', 'sepal-width', 'petal-length', 'petal-width', 'class']
-dataset = pd.read_csv(url, names=names)
+dataset = pd.read_csv("F:\College\Projects\Iris_Flower_Classification\data\iris.csv", names=names)
 #to get total attributes
 print(dataset.shape)
 #avoid truncation
@@ -45,7 +45,7 @@ X=array[:,0:4]
 Y = array[:,4]
 #X stores first 4 columns
 #Y stores last column
-X_train, X_validation, Y_train, Y_validation = model_selection.train_test_split(X, Y, test_size=0.25, random_state=42)
+X_train, X_validation, Y_train, Y_validation = model_selection.train_test_split(X, Y, test_size=0.25, random_state=0)
 #we use accuracy here
 scoring = 'accuracy'
 #Checking Algorithms
@@ -59,9 +59,17 @@ models.append(('SVM', SVC()))
 results = []
 names = []
 for name, model in models:
-	kfold = model_selection.KFold(n_splits=10, random_state=42)
+	kfold = model_selection.KFold(n_splits=10, random_state=0)
 	cv_results = model_selection.cross_val_score(model, X_train, Y_train, cv=kfold, scoring=scoring)
 	results.append(cv_results)
 	names.append(name)
 	msg = "%s: %f (%f)" % (name, cv_results.mean(), cv_results.std())
 	print(msg)
+    
+# training with SVM as it has highest accuracy
+sv = SVC()
+sv.fit(X_train,Y_train)
+predict =sv.predict(X_validation)
+print(accuracy_score(Y_validation, predict))
+print(confusion_matrix(Y_validation, predict))
+print(classification_report(Y_validation, predict))
