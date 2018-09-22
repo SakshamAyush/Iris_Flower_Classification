@@ -12,7 +12,7 @@ Install [Anaconda](https://www.continuum.io/downloads), a pre-packaged Python di
 
 The dataset for this project originates from the UCI Machine Learning Repository. The Iris flower data set or Fisher's Iris data set is a multivariate data set introduced by the British statistician and biologist Ronald Fisher in his 1936 paper The use of multiple measurements in taxonomic problems as an example of linear discriminant analysis.
 
-The data set consists of 50 samples from each of three species of Iris (Iris setosa, Iris virginica and Iris versicolor).
+The data set consists of 150 samples from each of three species of Iris (Iris setosa, Iris virginica and Iris versicolor).
 Four features were measured from each sample (in centimetres):
  - Length of the sepals
  - Width of the sepals
@@ -20,7 +20,7 @@ Four features were measured from each sample (in centimetres):
  - Width of the petals
  
  # To run
- Go to the Anaconda Prompt, change the directly to the project directory and run the command 'python api.py'. It should run commands as shown in the screenshot -
+ Go to the Anaconda Prompt, change the directory to the project directory and run the command 'python api.py'. It should run commands as shown in the screenshot -
 ![capture4](https://user-images.githubusercontent.com/42735975/45918255-baee6d80-bea1-11e8-8343-85aafd7cbc92.PNG)
 
 After that, open your browser and enter the address- 'http://localhost:8000'. It should open the following - 
