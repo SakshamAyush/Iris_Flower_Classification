@@ -18,9 +18,10 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
 from sklearn.naive_bayes import GaussianNB
 from sklearn.svm import SVC
+from sklearn.externals import joblib
 url = "https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data"
 names = ['sepal-length', 'sepal-width', 'petal-length', 'petal-width', 'class']
-dataset = pd.read_csv("F:\College\Projects\Iris_Flower_Classification\data\iris.csv", names=names)
+dataset = pd.read_csv("F:\College\Projects\Iris_Flower_Classification\data\iris.csv" , names=names)
 #to get total attributes
 print(dataset.shape)
 #avoid truncation
@@ -73,3 +74,6 @@ predict =sv.predict(X_validation)
 print(accuracy_score(Y_validation, predict))
 print(confusion_matrix(Y_validation, predict))
 print(classification_report(Y_validation, predict))
+#Training Complete
+#Deployment
+joblib.dump(sv, 'iris.pkl')
