@@ -18,3 +18,16 @@ Four features were measured from each sample (in centimetres):
  - Width of the sepals
  - Length of the petals
  - Width of the petals
+ 
+ # To run
+ Go to the Anaconda Prompt, change the directly to the project directory and run the command 'python api.py'. It should run commands as shown in the screenshot -
+![capture4](https://user-images.githubusercontent.com/42735975/45918255-baee6d80-bea1-11e8-8343-85aafd7cbc92.PNG)
+
+After that, open your browser and enter the address- 'http://localhost:8000'. It should open the following - 
+![capture](https://user-images.githubusercontent.com/42735975/45918263-ea9d7580-bea1-11e8-9d02-ea055adda4d0.PNG)
+
+In the given fields, enter the required values -
+![capture2](https://user-images.githubusercontent.com/42735975/45918268-086ada80-bea2-11e8-9f33-9f033e41a29f.PNG)
+
+And you have your precdiction !
+![capture3](https://user-images.githubusercontent.com/42735975/45918278-30f2d480-bea2-11e8-9492-1f3fd9ebe117.PNG)
