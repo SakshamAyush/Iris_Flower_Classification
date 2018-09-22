@@ -6,5 +6,13 @@
   </head>
   <body>
     <h1>Iris Flower Recognition</h1>
+
+	<form action="http://localhost:8000/predict" method="post">
+		<input type="text" name="f1" placeholder="Sepal-length in cm">
+		<input type="text" name="f2" placeholder="Sepal-width in cm"> 
+		<input type="text" name="f3" placeholder="Petal-length in cm"> 
+		<input type="text" name="f4" placeholder="Petal-width in cm">      
+		<input type="submit" value="Predict">
+	</form>	
   </body>
 </html>
