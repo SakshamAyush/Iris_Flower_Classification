@@ -24,10 +24,10 @@ Four features were measured from each sample (in centimetres):
 ![capture4](https://user-images.githubusercontent.com/42735975/45918255-baee6d80-bea1-11e8-8343-85aafd7cbc92.PNG)
 
 After that, open your browser and enter the address- 'http://localhost:8000'. It should open the following - 
-![capture](https://user-images.githubusercontent.com/42735975/45918263-ea9d7580-bea1-11e8-9d02-ea055adda4d0.PNG)
+![capture](https://user-images.githubusercontent.com/42735975/45927226-5e488c80-bf4d-11e8-89a0-100a93d0e1f7.PNG)
 
 In the given fields, enter the required values -
-![capture2](https://user-images.githubusercontent.com/42735975/45918268-086ada80-bea2-11e8-9f33-9f033e41a29f.PNG)
+![capture2](https://user-images.githubusercontent.com/42735975/45927212-36592900-bf4d-11e8-8d36-99046a27854a.PNG)
 
 And you have your precdiction !
 ![capture3](https://user-images.githubusercontent.com/42735975/45918278-30f2d480-bea2-11e8-9492-1f3fd9ebe117.PNG)
