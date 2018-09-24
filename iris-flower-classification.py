@@ -21,7 +21,7 @@ from sklearn.svm import SVC
 from sklearn.externals import joblib
 url = "https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data"
 names = ['sepal-length', 'sepal-width', 'petal-length', 'petal-width', 'class']
-dataset = pd.read_csv("F:\College\Projects\Iris_Flower_Classification\data\iris.csv" , names=names)
+dataset = pd.read_csv(url , names=names)
 #to get total attributes
 print(dataset.shape)
 #avoid truncation
