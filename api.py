@@ -30,8 +30,8 @@ def make_prediction():
         feature = np.asarray(feature_array).reshape(1,4)
         #feature_array = request.get_json()['feature_array[]']
         prediction = model.predict(feature).tolist()
-        return flask.jsonify(prediction)
+
+        return flask.jsonify("".join(prediction))
 if __name__ == '__main__':
     model = joblib.load('iris.pkl')
     app.run(host='0.0.0.0', port=8000, debug=True)
-    
